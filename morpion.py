@@ -61,6 +61,25 @@ def victoire_joueur2():
 
 case = ["A1", "B1", "C1", "A2", "B2", "C2", "A3", "B3", "C3"]
 
+dicotouche = {
+    1:"A1",
+    2:"B1",
+    3:"C1",
+    4:"A2",
+    5:"B2",
+    6:"C2",
+    7:"A3",
+    8:"B3",
+    9:"C3",
+}
+
+def coupcase(coup_joueur):
+    coup_joueur = dicotouche[coup_joueur]
+    return coup_joueur
+
+
+
+
 liste_coup_disponible = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"]
 liste_coup_joueur1 = []
 liste_coup_joueur2 = []
