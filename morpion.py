@@ -94,7 +94,7 @@ PA3="7"
 PB3="8"
 PC3="9"
 
-def affichageXouO(cellule,numcellule) :
+def affichageXouO(cellule) :
     if cellule in liste_coup_joueur1:
         cellule="X"
     if cellule in liste_coup_joueur2:
