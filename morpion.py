@@ -1,65 +1,66 @@
 from os import remove
 
-#Fonction qui vérifie si le joueur 1 a gagné
-def victoire_joueur1():
 
-    if "A1" and "A2" and "A3" in liste_coup_joueur1:      #A1 & A2 & A3
+def victoire_joueur1(test):
+    """Vérifie si le joueur 1 a gagné"""
+
+    if "A1" in test and "A2" in test and "A3" in test:      #A1 & A2 & A3
         return True
 
-    elif "B1" and "B2" and "B3" in liste_coup_joueur1:    #B1 & B2 & B3
+    elif "B1" in test and "B2" in test and "B3" in test:    #B1 & B2 & B3
         return True
 
-    elif "C1" and "C2" and "C3" in liste_coup_joueur1:    #C1 & C2 & C3
+    elif "C1" in test and "C2" in test and "C3" in test:    #C1 & C2 & C3
         return True
         
-    elif "A1" and "B1" and "C1" in liste_coup_joueur1:    #A1 & B1 & C1
+    elif "A1" in test and "B1" in test and "C1" in test:    #A1 & B1 & C1
         return True
 
-    elif "A2" and "B2" and "C2" in liste_coup_joueur1:    #A2 & B2 & C2
+    elif "A2" in test and "B2" in test and "C2" in test:    #A2 & B2 & C2
         return True
 
-    elif "A3" and "B3" and "C3" in liste_coup_joueur1:    #A3 & B3 & C3
+    elif "A3" in test and "B3" in test and "C3" in test:    #A3 & B3 & C3
         return True
 
-    elif "A1" and "B2" and "C3" in liste_coup_joueur1:    #A1 & B2 & C3
+    elif "A1" in test and "B2" in test and "C3" in test:    #A1 & B2 & C3
         return True
 
-    elif "A3" and "B2" and "C1" in liste_coup_joueur1:    #A3 & B2 & C1
+    elif "A3" in test and "B2" in test and "C1" in test:    #A3 & B2 & C1
         return True
+    
     else:
         return False
 
 
-#Fonction qui vérifie si le joueur 2 a gagné
-def victoire_joueur2():
+def victoire_joueur2(test):
+    """Vérifie si le joueur 2 a gagné"""
 
-    if "A1" and "A2" and "A3" in liste_coup_joueur2:      #A1 & A2 & A3
+    if "A1" in test and "A2" in test and "A3" in test:      #A1 & A2 & A3
         return True
 
-    elif "B1" and "B2" and "B3" in liste_coup_joueur2:    #B1 & B2 & B3
+    elif "B1" in test and "B2" in test and "B3" in test:    #B1 & B2 & B3
         return True
 
-    elif "C1" and "C2" and "C3" in liste_coup_joueur2:    #C1 & C2 & C3
+    elif "C1" in test and "C2" in test and "C3" in test:    #C1 & C2 & C3
         return True
         
-    elif "A1" and "B1" and "C1" in liste_coup_joueur2:    #A1 & B1 & C1
+    elif "A1" in test and "B1" in test and "C1" in test:    #A1 & B1 & C1
         return True
 
-    elif "A2" and "B2" and "C2" in liste_coup_joueur2:    #A2 & B2 & C2
+    elif "A2" in test and "B2" in test and "C2" in test:    #A2 & B2 & C2
         return True
 
-    elif "A3" and "B3" and "C3" in liste_coup_joueur2:    #A3 & B3 & C3
+    elif "A3" in test and "B3" in test and "C3" in test:    #A3 & B3 & C3
         return True
 
-    elif "A1" and "B2" and "C3" in liste_coup_joueur2:    #A1 & B2 & C3
+    elif "A1" in test and "B2" in test and "C3" in test:    #A1 & B2 & C3
         return True
 
-    elif "A3" and "B2" and "C1" in liste_coup_joueur2:    #A3 & B2 & C1
+    elif "A3" in test and "B2" in test and "C1" in test:    #A3 & B2 & C1
         return True
     else:
         return False
 
-case = ["A1", "B1", "C1", "A2", "B2", "C2", "A3", "B3", "C3"]
 
 dicotouche = {
     1:"A1",
@@ -126,7 +127,9 @@ while True:
         else:
             print("Réessayez")
 
-    if victoire_joueur1():
+    print(liste_coup_joueur1)
+    if victoire_joueur1(liste_coup_joueur1):
+        print("Félicitations Joueur 1, vous avez gagné")
         break
 
     
@@ -148,7 +151,10 @@ while True:
         else:
             print("Réessayez")
 
-    if victoire_joueur2():
+    print(liste_coup_joueur1)
+    print(liste_coup_joueur2)
+    if victoire_joueur2(liste_coup_joueur2):
+        print("Félicitations Joueur 2, vous avez gagné")
         break
 
 print("Fin de partie, merci d'avoir joué")
